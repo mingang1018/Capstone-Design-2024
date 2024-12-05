@@ -1,0 +1,56 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- 빵 모양 -->
+    <path
+        android:fillColor="#E0A96D"
+        android:pathData="M40,10 C50,10 60,15 60,30 C60,50 40,80 20,70 C10,65 10,40 20,20 C25,10 30,10 40,10 Z" />
+
+    <!-- 빵 내부 점 모양 -->
+    <path
+        android:fillColor="#7B4A12"
+        android:pathData="M30,25 L33,23 L34,28 Z" />
+    <path
+        android:fillColor="#7B4A12"
+        android:pathData="M25,35 L28,33 L29,38 Z" />
+    <path
+        android:fillColor="#7B4A12"
+        android:pathData="M35,45 L38,43 L39,48 Z" />
+    <path
+        android:fillColor="#7B4A12"
+        android:pathData="M20,50 L23,48 L24,53 Z" />
+    <path
+        android:fillColor="#7B4A12"
+        android:pathData="M40,55 L43,53 L44,58 Z" />
+
+    <!-- 밥 그릇 모양 -->
+    <path
+        android:fillColor="#89CFF0"
+        android:pathData="M50,50 C60,50 75,55 75,65 L25,65 C25,55 40,50 50,50 Z" />
+
+    <!-- 밥 모양 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,45 C65,45 75,55 75,65 C75,70 65,75 50,75 C35,75 25,70 25,65 C25,55 35,45 50,45 Z" />
+
+    <!-- 밥알 점 모양 -->
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M45,55 L47,53 L48,57 Z" />
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M55,55 L57,53 L58,57 Z" />
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M50,60 L52,58 L53,62 Z" />
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M40,65 L42,63 L43,67 Z" />
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M60,65 L62,63 L63,67 Z" />
+
+</vector>

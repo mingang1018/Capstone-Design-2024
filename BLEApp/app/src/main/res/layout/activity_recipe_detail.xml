@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- 레시피 이름 -->
+            <TextView
+                android:id="@+id/recipe_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                tools:text="제육볶음"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/recipe_detail_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                tools:text="돼지고기를 고추장 양념에 재워 볶은 요리"
+                app:layout_constraintTop_toBottomOf="@id/recipe_detail_name"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- 재료를 동적으로 추가할 LinearLayout -->
+            <LinearLayout
+                android:id="@+id/ingredients_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/recipe_detail_description"
+                app:layout_constraintStart_toStartOf="parent" />
+            <!-- 전송 버튼 -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/send_button"
+                android:text="@string/send_button_text"
+                android:textSize="16sp"
+                style="@style/button_card"
+                app:layout_constraintTop_toBottomOf="@id/ingredients_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/recipe_detail_nutrient"/>
+            <!-- 영양분 ProgressBar Layout -->
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/recipe_detail_nutrient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ingredients_layout"
+                app:layout_constraintBottom_toTopOf="@id/recipe_detail_steps"
+                android:orientation="vertical">
+                <!-- 칼로리, 나트륨-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <!-- 칼로리 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kcal_text"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="16sp" />
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center">
+                            <ProgressBar
+                                android:id="@+id/progressbar_kcal"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false"
+                                android:max="230000"
+                                android:progressBackgroundTint="#FBE7C6"
+                                android:progressDrawable="@drawable/circle_progressbar"
+                                android:progressTint="#edbf41" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/calories" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/kcal_size_text"
+                            android:text="@string/kcal_size_text"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <!-- 나트륨 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/na_text"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="16sp" />
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center">
+                            <ProgressBar
+                                android:id="@+id/progressbar_na"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false"
+                                android:max="200000"
+                                android:progressBackgroundTint="#FBE7C6"
+                                android:progressDrawable="@drawable/circle_progressbar"
+                                android:progressTint="#edbf41" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/sodium" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/na_size_text"
+                            android:text="@string/na_size_text"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 탄수화물, 단백질, 지방-->
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <!-- 탄수화물 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/car_text"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="16sp"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center">
+                            <ProgressBar
+                                android:id="@+id/progressbar_car"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false"
+                                android:max="29000"
+                                android:progressBackgroundTint="#FBE7C6"
+                                android:progressDrawable="@drawable/circle_progressbar"
+                                android:progressTint="#edbf41" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/carbohydrates" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/car_size_text"
+                            android:text="@string/car_size_text"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <!-- 단백질 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pro_text"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="16sp" />
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center">
+                            <ProgressBar
+                                android:id="@+id/progressbar_pro"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false"
+                                android:max="6000"
+                                android:progressBackgroundTint="#FBE7C6"
+                                android:progressDrawable="@drawable/circle_progressbar"
+                                android:progressTint="#edbf41" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/proteins" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/pro_size_text"
+                            android:text="@string/pro_size_text"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <!-- 지방 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fat_text"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="16sp" />
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center">
+                            <ProgressBar
+                                android:id="@+id/progressbar_fat"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false"
+                                android:max="7000"
+                                android:progressBackgroundTint="#FBE7C6"
+                                android:progressDrawable="@drawable/circle_progressbar"
+                                android:progressTint="#edbf41" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/fat" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/fat_size_text"
+                            android:text="@string/fat_size_text"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/reference_text"
+                    android:gravity="end"
+                    android:text="@string/abs_text"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/kcal_weight_layout">
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:id="@+id/scale_button"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/scale"
+                    android:background="@drawable/image_button_background"
+                    android:textOff=""
+                    android:textOn=""
+                    android:checked="false"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:hint="@string/weight_hint"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/weight_input"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:textAppearance="@style/HintTextStyle"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/input_text"
+                    android:id="@+id/send_scale_button"
+                    style="@style/button_card"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="@string/recipe_text"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/recipe_detail_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:gravity="start"
+                android:letterSpacing="0.05"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/recipe_detail_nutrient"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

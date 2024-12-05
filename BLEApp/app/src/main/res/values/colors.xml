@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF7E57C2</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="start">#78C268</color>
+    <color name="end">#338751</color>
+    <color name="red_500">#F44336</color>
+    <color name="progressNormal">#edbf41</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="blue">#2196F3</color>
+    <color name="pink">#F48FB1</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="grayAccent">#8C8C8C</color>
+    <!-- Colors -->
+    <color name="appBarColor">#6200EE</color>
+    <color name="navigationBarColor">#3700B3</color>
+
+    <color name="battery_text_color_normal">#5DBB63</color>
+    <color name="battery_text_color_caution">#D3FF2951</color>
+</resources>

@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Universal Scale</string>
+    <!-- Bottom Navigation -->
+    <string name="home">Home</string>
+    <string name="weight">Weight</string>
+    <string name="setting">Setting</string>
+    <string name="recipe">Recipe</string>
+
+    <string name="recivedDataText">%sg</string>
+
+    <string name="Home_text">Home</string>
+    <string name="Weight_text">Weight Settings</string>
+    <string name="Recipe_text">Recipe</string>
+    <string name="Setting_text">User Settings</string>
+
+    <string name="home_fragment">Home Fragment</string>
+    <string name="sensor_fragment">Sensor Fragment</string>
+    <string name="setting_fragment">Setting Fragment</string>
+    <string name="recipe_fragment">Recipe Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_Button">Set</string>
+    <string name="terra_button">Terra</string>
+    <string name="Enter_Button">ENTER</string>
+    <string name="Reset_Button">Reset</string>
+    <string name="Delete_Button">Delete</string>
+    <string name="connect">Connect</string>
+    <string name="terra_sound">Zero point set.</string>
+    <string name="delete_sound">Clicked the Delete Button value : %s</string>
+    <string name="reset_sound">Clicked the Reset Button</string>
+    <string name="enter_sound">A value of %s was sent.</string>
+    <string name="error_sound">The number is incorrect</string>
+    <string name="exceeded_sound">The input value exceeded 5000.</string>
+    <string name="current_weight">%sg</string>
+    <string name="slash"> / </string>
+    <string name="set_weight">%sg</string>
+    <string name="tts_switch">TTS Switch</string>
+    <string name="number_text_gram">%sg</string>
+    <string name="kcal_size_text">%s / 2300 kcal</string>
+    <string name="car_size_text">%s /  290g</string>
+    <string name="pro_size_text">%s / 60 g</string>
+    <string name="fat_size_text">%s / 70 g</string>
+    <string name="na_size_text">%s / 2000 mg</string>
+    <string name="car_text">Carbohydrate</string>
+    <string name="pro_text">Protein</string>
+    <string name="fat_text">Fat</string>
+    <string name="na_text">Sodium</string>
+    <string name="kcal_text">Calorie</string>
+    <string name="abs_text">Reference value: %sg</string>
+    <string name="send_button_text">Weight Data Send</string>
+    <string name="recipe_text">RecipeText</string>
+    <string name="recipe_weight_ToolBar_text">Recipe Weight List</string>
+    <string name="recipe_weight_Completed">All values in the recipe have been completed.</string>
+    <string name="checkbox_error">Please click the checkbox.</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="activity_level">Activity_level</string>
+    <string name="recommended_cal">Recommended calories: %1$d kcal</string>
+    <string name="recommended_na">Recommended sodium: %1$d mg</string>
+    <string name="recommended_car">Recommended carbohydrates: %1$d g</string>
+    <string name="recommended_pro">Recommended protein: %1$d g</string>
+    <string name="recommended_fat">Recommended fat: %1$d g</string>
+    <string name="kcal_max_text">%s / %s kcal</string>
+    <string name="car_max_text">%s / %s g</string>
+    <string name="pro_max_text">%s / %s g</string>
+    <string name="fat_max_text">%s / %s g</string>
+    <string name="na_max_text">%s / %s mg</string>
+    <string name="success_sound">The target value has been reached.</string>
+    <string name="weight_hint">Please enter weight: [Unit: g]</string>
+    <string name="input_text">Input</string>
+    <string name="scale_send_error">Please enter the weight value.</string>
+    <string name="scale_send_text">%sg has been entered.</string>
+    <string name="ble_connect_error">Please check the Bluetooth connection.</string>
+    <string name="batteryValue_text">%s</string>
+    <string name="percent">%</string>
+    <string name="loop_text">Loop</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activity_levels">
+        <item>선택하시오</item>
+        <item>매우 낮은 활동량 (주로 앉아서 생활)</item>
+        <item>약간의 운동 (주 1-3회 가벼운 운동)</item>
+        <item>보통 활동량 (주 3-5회 보통 운동)</item>
+        <item>높은 활동량 (주 6-7회 격렬한 운동)</item>
+        <item>매우 높은 활동량 (매우 활동적, 육체 노동 직업)</item>
+    </string-array>
+</resources>

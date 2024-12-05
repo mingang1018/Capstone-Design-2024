@@ -1,0 +1,13 @@
+<!-- res/drawable/image_button_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scale_off">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/darker_gray" /> <!-- 배경색 흰색 -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/purple_700" /> <!-- 테두리 색상과 두께 -->
+            <corners android:radius="8dp" /> <!-- 모서리 둥글게 -->
+        </shape>
+    </item>
+</layer-list>

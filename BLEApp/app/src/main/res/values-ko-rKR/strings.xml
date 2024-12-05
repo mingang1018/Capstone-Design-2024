@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">유니버셜 저울</string>
+    <!-- Bottom Navigation -->
+    <string name="home">홈</string>
+    <string name="weight">무게설정</string>
+    <string name="setting">설정</string>
+    <string name="recipe">레시피</string>
+    <string name="recivedDataText">%sg</string>
+
+    <string name="Home_text">홈</string>
+    <string name="Weight_text">무게 설정</string>
+    <string name="Recipe_text">레시피</string>
+    <string name="Setting_text">사용자 설정</string>
+
+    <string name="home_fragment">Home Fragment</string>
+    <string name="sensor_fragment">Sensor Fragment</string>
+    <string name="setting_fragment">Setting Fragment</string>
+    <string name="recipe_fragment">Recipe Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_Button">설정</string>
+    <string name="terra_button">영점</string>
+    <string name="Enter_Button">입력</string>
+    <string name="Reset_Button">초기화</string>
+    <string name="Delete_Button">삭제</string>
+    <string name="connect">연결</string>
+    <string name="terra_sound">영점을 설정했습니다.</string>
+
+    <string name="delete_sound">삭제버튼을 클릭하여 %s입니다.</string>
+    <string name="reset_sound">초기화버튼을 클릭하셨습니다.</string>
+    <string name="enter_sound">%s의 값이 전송되었습니다.</string>
+    <string name="error_sound">숫자의 형식이 올바르지 않습니다.</string>
+    <string name="exceeded_sound">입력값이 5000을 초과했습니다.</string>
+    <string name="current_weight">%sg</string>
+    <string name="slash"> / </string>
+    <string name="set_weight">%sg</string>
+    <string name="tts_switch">TTS유무</string>
+    <string name="number_text_gram">%sg</string>
+    <string name="kcal_size_text">%s / 2300 kcal</string>
+    <string name="car_size_text">%s /  290g</string>
+    <string name="pro_size_text">%s / 60 g</string>
+    <string name="fat_size_text">%s / 70 g</string>
+    <string name="na_size_text">%s / 2000 mg</string>
+    <string name="car_text">탄수화물</string>
+    <string name="pro_text">단백질</string>
+    <string name="fat_text">지방</string>
+    <string name="na_text">나트륨</string>
+    <string name="kcal_text">칼로리</string>
+    <string name="abs_text">기준치: %sg</string>
+    <string name="send_button_text">무게 값 전송</string>
+    <string name="recipe_text">레시피</string>
+    <string name="recipe_weight_ToolBar_text">레시피 무게 목록</string>
+    <string name="recipe_weight_Completed">레시피의 모든 값이 완성되었습니다.</string>
+    <string name="checkbox_error">체크박스를 클릭해주세요.</string>
+    <string name="female">여자</string>
+    <string name="male">남자</string>
+    <string name="activity_level">활동지수</string>
+    <string name="recommended_cal">하루 권장 칼로리: %1$d kcal</string>
+    <string name="recommended_na">하루 권장 나트륨: %1$d mg</string>
+    <string name="recommended_car">하루 권장 탄수화물: %1$d g</string>
+    <string name="recommended_pro">하루 권장 단백질: %1$d g</string>
+    <string name="recommended_fat">하루 권장 지방: %1$d g</string>
+    <string name="kcal_max_text">%s / %s kcal</string>
+    <string name="car_max_text">%s / %s g</string>
+    <string name="pro_max_text">%s / %s g</string>
+    <string name="fat_max_text">%s / %s g</string>
+    <string name="na_max_text">%s / %s mg</string>
+    <string name="success_sound">목표값에 도달했습니다.</string>
+    <string name="weight_hint">무게를 입력하시오: [단위:g]</string>
+    <string name="input_text">입력</string>
+    <string name="scale_send_error">무게값을 입력해주세요.</string>
+    <string name="scale_send_text">%sg이 전송되었습니다.</string>
+    <string name="ble_connect_error">Bluetooth연결을 확인해주세요.</string>
+    <string name="batteryValue_text">%s</string>
+    <string name="percent">%</string>
+    <string name="loop_text">반복</string>
+</resources>

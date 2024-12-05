@@ -1,0 +1,53 @@
+<navigation
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_home"
+    android:id="@+id/nav_graph">
+
+    <!-- HomeFragment 정의 -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ble_permisison.HomeFragment"
+        android:label="@string/Home_text"
+        tools:layout="@layout/fragment_home">
+
+        <!-- WeightFragment에서 전달받을 인수 정의 -->
+        <argument
+            android:name="receivedWeight"
+            app:argType="string"
+            android:defaultValue="0" />
+
+        <action
+            android:id="@+id/nav_home_to_weight"
+            app:destination="@id/nav_weight"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- WeightFragment 정의 -->
+    <fragment
+        android:id="@+id/nav_weight"
+        android:name="com.example.ble_permisison.WeightFragment"
+        android:label="@string/Weight_text"
+        tools:layout="@layout/fragment_weight">
+        <action
+            android:id="@+id/action_nav_weight_to_home"
+            app:destination="@id/nav_home"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_recipe"
+        android:name="com.example.ble_permisison.RecipeFragment"
+        android:label="@string/Recipe_text"
+        tools:layout="@layout/fragment_recipe">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.ble_permisison.SettingFragment"
+        android:label="@string/Setting_text"
+        tools:layout="@layout/fragment_setting">
+    </fragment>
+
+</navigation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hint 텍스트 크기를 다르게 설정하는 스타일 -->
+    <style name="HintTextStyle">
+        <item name="android:textSize">10sp</item> <!-- hint 텍스트 크기 -->
+        <item name="android:textColorHint">#808080</item> <!-- 선택사항: hint 색상 변경 -->
+    </style>
+</resources>
